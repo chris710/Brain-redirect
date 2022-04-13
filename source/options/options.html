@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Options</title>
+<link rel="stylesheet" href="chrome://global/skin/in-content/common.css" />
+<link rel="stylesheet" href="options.css" />
+
+<form id="options-form" class="detail-view-container">
+	<h2>Options</h2>
+	<br />
+	<strong><i>NOTE: Settings are saved automatically</i></strong>
+	<div class="options">
+		<div class="option textarea">
+			<label class="formLabel">Blacklist</label>
+			<div>
+				<textarea id="blacklist" rows="10" name="blacklist">
+facebook.com
+youtube.com
+reddit.com
+google.com
+				</textarea>
+				<span class="greyText"
+					>one domain per line -- no www. - no http:// -- e.g.
+					facebook.com</span
+				>
+			</div>
+		</div>
+		<div class="option textarea">
+			<label class="formLabel">Challenge URL</label>
+			<div>
+				<input type="text" id="challenge" rows="1" name="challenge" value="clozemaster.com">
+				</input>
+			</div>
+		</div>
+
+		<div class="option textarea">
+			<label class="formLabel">Challenge completed trigger</label>
+			<div>
+				<input type="text" id="trigger" rows="1" name="trigger" value="clozemaster.com">
+				</input>
+			</div>
+		</div>
+
+		<div class="option">
+			<label class="formLabel">Block embedded</label>
+			<div>
+				<label class="switch">
+					<input type="checkbox" id="embedded" name="embedded" />
+					<span class="slider round"></span>
+				</label>
+				<span class="greyText"
+					>i.e. tweets, facebook posts, youtube videos in other pages</span
+				>
+			</div>
+		</div>
+
+	</div>
+	<button id="resetButton">reset to default</button>
+</form>
+
+<script type="module" src="options.js"></script>

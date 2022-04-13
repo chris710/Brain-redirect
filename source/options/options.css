@@ -1,0 +1,133 @@
+html {
+	min-width: 550px;
+	overflow-x: hidden; /* Required to hide horizontal scroll on Firefox */
+}
+html,
+body {
+	height: 100%;
+	background-color: #fff;
+}
+body {
+	padding: 10px;
+}
+textarea,
+input,
+select {
+	background-color: #fff !important;
+	color: black;
+}
+
+/* For use with screen readers */
+.sr-only {
+	display: none;
+}
+
+.option {
+	padding: 10px;
+	width: 100%;
+	display: table-row;
+}
+.options {
+	display: table;
+	border-spacing: 0.5em;
+	width: 100%;
+}
+.option .formLabel,
+.option div {
+	vertical-align: top;
+	display: table-cell;
+	padding: 20px 0;
+}
+.option .formLabel {
+	width: 15%;
+}
+.option div {
+	width: 85%;
+}
+.option textarea {
+	width: 90%;
+}
+.option .difficulty label {
+	display: block;
+	padding: 5px 0;
+}
+.greyText {
+	display: block;
+	padding-top: 10px;
+	font-size: 0.9em;
+	line-height: 2em;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 16px;
+	width: 16px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(16px);
+	-ms-transform: translateX(16px);
+	transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 22px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* Firefox only */
+.only-firefox {
+	display: none;
+}
+
+/*@-moz-document url-prefix('') {
+	.only-firefox {
+		display: block;
+	}
+}*/
